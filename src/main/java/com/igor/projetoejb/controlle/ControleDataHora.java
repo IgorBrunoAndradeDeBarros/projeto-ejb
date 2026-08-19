@@ -1,4 +1,6 @@
-package com.igor.projetoejb;
+package com.igor.projetoejb.controlle;
+
+import com.igor.projetoejb.ejb.BeanDataHora;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;

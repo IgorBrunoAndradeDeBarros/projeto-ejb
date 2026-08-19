@@ -1,5 +1,7 @@
 package com.igor.projetoejb;
 
+import com.igor.projetoejb.ejb.BeanDataHora;
+
 import javax.ejb.EJB;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

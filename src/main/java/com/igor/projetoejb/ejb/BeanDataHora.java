@@ -1,4 +1,4 @@
-package com.igor.projetoejb;
+package com.igor.projetoejb.ejb;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
