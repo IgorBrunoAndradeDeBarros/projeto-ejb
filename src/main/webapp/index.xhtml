@@ -11,5 +11,12 @@
         A data e hora do EJB é:
         <h:outputText value="#{controleDataHora.beanDataHora.dataHoraServidor}"/>
     </p>
+
+    <h1><h:outputLabel value="#{controleDataHora.nomeUsuario}"/></h1>
+
+    <h:form>
+        Usuario: <h:inputText value="#{controleUsuario.beanUsuario.usuario}"/>
+        <h:commandButton action="#{controleUsuario.informaUsuario}" value="Informe o usuario" />
+    </h:form>
 </h:body>
 </html>

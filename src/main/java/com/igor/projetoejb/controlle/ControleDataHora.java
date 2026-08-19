@@ -4,6 +4,7 @@ import com.igor.projetoejb.ejb.BeanDataHora;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 
@@ -12,9 +13,16 @@ import java.io.Serializable;
 public class ControleDataHora implements Serializable {
 
     @EJB
-    BeanDataHora beanDataHora;
+    private BeanDataHora beanDataHora;
+    @Inject
+    ControleUsuario controleUsuario;
 
     public ControleDataHora() {
+    }
+
+    public String getNomeUsuario(){
+        return controleUsuario.getBeanUsuario().getUsuario() != null ?
+                controleUsuario.getBeanUsuario().getUsuario() : "usuario nao informado";
     }
 
     public BeanDataHora getBeanDataHora() {
@@ -23,5 +31,13 @@ public class ControleDataHora implements Serializable {
 
     public void setBeanDataHora(BeanDataHora beanDataHora) {
         this.beanDataHora = beanDataHora;
+    }
+
+    public ControleUsuario getControleUsuario() {
+        return controleUsuario;
+    }
+
+    public void setControleUsuario(ControleUsuario controleUsuario) {
+        this.controleUsuario = controleUsuario;
     }
 }
