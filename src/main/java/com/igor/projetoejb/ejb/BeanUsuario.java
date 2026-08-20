@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.concurrent.TimeUnit;
 
 @Stateful
-@StatefulTimeout(unit = TimeUnit.MINUTES, value = 1)
+@StatefulTimeout(unit = TimeUnit.MINUTES, value = 30)
 public class BeanUsuario implements Serializable {
 
     private String usuario;
